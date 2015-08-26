@@ -65,6 +65,7 @@ object build extends Build {
       "-language:implicitConversions" ::
       Nil
     ),
+    fullResolvers ~= {_.filterNot(_.name == "jcenter")},
     ReleasePlugin.autoImport.releaseProcess := Seq[ReleaseStep](
       checkSnapshotDependencies,
       inquireVersions,
