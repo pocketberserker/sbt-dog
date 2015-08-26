@@ -20,6 +20,7 @@ object DogPlugin extends AutoPlugin {
     val dogTestNames = TaskKey[Map[String, Set[String]]]("dogTestNames")
     val dogOnly = InputKey[Unit]("dogOnly")
     val dogVersion = SettingKey[String]("dogVersion")
+    val scalapropsVersion = SettingKey[String]("scalapropsVersion")
 
     val dogCoreSettings: Seq[Setting[_]] = Seq(
       dogTestNames := {
@@ -61,6 +62,14 @@ object DogPlugin extends AutoPlugin {
 
     val dogWithGen: Seq[Setting[_]] = dogSettings ++ Seq(
       libraryDependencies += "com.github.pocketberserker" %% "dog-gen" % dogVersion.value % "test"
+    )
+
+    val dogWithScalaprops: Seq[Setting[_]] = dogWithGen ++ Seq(
+      libraryDependencies += "com.github.pocketberserker" %% "dog-props" % dogVersion.value % "test"
+    )
+
+    val dogWithScalazlaws: Seq[Setting[_]] = dogWithScalaprops ++ Seq(
+      libraryDependencies += "com.github.scalaprops" %% "scalaprops-scalazlaws" % scalapropsVersion.value % "test"
     )
   }
 
