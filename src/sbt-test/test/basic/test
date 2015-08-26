@@ -14,3 +14,4 @@ $ delete test3.txt
 -$ exists test2.txt
 -$ exists test3.txt
 
+> testOnly com.example.Test1 -- invalid_argument
