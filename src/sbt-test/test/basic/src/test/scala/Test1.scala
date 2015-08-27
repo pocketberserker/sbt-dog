@@ -12,18 +12,18 @@ object Test1 extends Dog {
   private[this] def write(file: String, text: String) =
     Files.write(Paths.get(file), text.getBytes(StandardCharsets.UTF_8))
 
-  val test1: TestCase[Unit] = {
+  val test1 = TestCase {
     write("test1.txt", "test1")
-    Assert.pass(())
+    TestResult(())
   }
 
-  val test2: TestCase[Unit] = {
+  val test2 = TestCase {
     write("test2.txt", "test2")
-    Assert.pass(())
+    TestResult(())
   }
 
-  val `test 3`: TestCase[Unit] = {
+  lazy val `test 3` = TestCase {
     write("test3.txt", "test3")
-    Assert.pass(())
+    TestResult(())
   }
 }
