@@ -24,7 +24,7 @@ object build extends Build {
     ),
     ScriptedPlugin.scriptedLaunchOpts ++= Seq(
       "-Dplugin.version=" + version.value,
-      "-Ddog.version=0.1.2",
+      "-Ddog.version=0.1.3",
       "-Dscalaprops.version=0.1.13"
     ),
     startYear := Some(2015),
