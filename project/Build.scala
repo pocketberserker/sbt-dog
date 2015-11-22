@@ -31,7 +31,7 @@ object build extends Build {
     organization := "com.github.pocketberserker",
     name := "sbt-dog",
     description := "sbt plugin for dog",
-    homepage := Some(url("https://github.com/pocketberserker/sbt-dog")),
+    homepage := Some(url("https://github.com/scala-kennel/sbt-dog")),
     licenses := Seq("MIT License" -> url("http://www.opensource.org/licenses/mit-license.php")),
     pomPostProcess := { node =>
       import scala.xml._
@@ -52,8 +52,8 @@ object build extends Build {
         </developer>
       </developers>
       <scm>
-        <url>git@github.com:pocketberserker/sbt-dog.git</url>
-        <connection>scm:git:git@github.com:pocketberserker/sbt-dog.git</connection>
+        <url>git@github.com:scala-kennel/sbt-dog.git</url>
+        <connection>scm:git:git@github.com:scala-kennel/sbt-dog.git</connection>
         <tag>{if(isSnapshot.value) gitHash else { "v" + version.value }}</tag>
       </scm>
     ),
