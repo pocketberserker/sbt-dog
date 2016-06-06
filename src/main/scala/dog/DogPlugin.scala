@@ -44,6 +44,7 @@ object DogPlugin extends AutoPlugin {
       dogTestNames <<= {
         dogTestNames storeAs dogTestNames triggeredBy (compile in Test)
       },
+      testFrameworks += new TestFramework("dog.DogFramework"),
       dogOnly <<= InputTask.createDyn(
         Defaults.loadForParser(dogTestNames)(
           (state, classes) => classes.fold(defaultParser)(createParser)
@@ -56,7 +57,6 @@ object DogPlugin extends AutoPlugin {
     )
 
     val dogSettings: Seq[Setting[_]] = dogCoreSettings ++ Seq(
-      testFrameworks += new TestFramework("dog.DogFramework"),
       libraryDependencies += "com.github.pocketberserker" %% "dog" % dogVersion.value % "test"
     )
 
