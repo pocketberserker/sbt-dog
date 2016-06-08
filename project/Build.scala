@@ -24,8 +24,8 @@ object build extends Build {
     ),
     ScriptedPlugin.scriptedLaunchOpts ++= Seq(
       "-Dplugin.version=" + version.value,
-      "-Ddog.version=0.2.0",
-      "-Dscalaprops.version=0.2.0"
+      "-Ddog.version=0.3.0",
+      "-Dscalaprops.version=0.3.1"
     ),
     startYear := Some(2015),
     organization := "com.github.pocketberserker",

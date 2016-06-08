@@ -17,7 +17,7 @@ addSbtPlugin("com.github.pocketberserker" % "sbt-dog" % "0.1.0")
 ```scala
 dogSettings
 
-dogVersion := "0.2.0"
+dogVersion := "0.3.0"
 ```
 
 or
@@ -25,7 +25,7 @@ or
 ```scala
 dogWithGen
 
-dogVersion := "0.2.0"
+dogVersion := "0.3.0"
 ```
 
 or
@@ -33,7 +33,7 @@ or
 ```scala
 dogWithScalaprops
 
-dogVersion := "0.2.0"
+dogVersion := "0.3.0"
 ```
 
 or
@@ -41,7 +41,7 @@ or
 ```scala
 dogWithScalazlaws
 
-dogVersion := "0.2.0"
-scalapropsVersion := "0.2.0"
+dogVersion := "0.3.0"
+scalapropsVersion := "0.3.1"
 ```
 
