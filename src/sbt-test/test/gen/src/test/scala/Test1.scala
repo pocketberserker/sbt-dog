@@ -5,7 +5,7 @@ import scalaprops._
 import scalaz.std.anyVal._
 import scalaz.std.tuple._
 
-object Test1 extends Dog {
+object Test1 extends Dog with Assert {
 
   final case class Point[A](x: A, y: A)
 
@@ -18,7 +18,7 @@ object Test1 extends Dog {
       }
   }
 
-  val point = Parameterize((t: (Int, Int)) =>
-    Assert.pred(t._1 != t._2)
-  )
+  val point = Parameterize((t: (Int, Int)) => TestCase {
+    pred(t._1 != t._2)
+  })
 }

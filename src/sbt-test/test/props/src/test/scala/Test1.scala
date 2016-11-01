@@ -6,7 +6,7 @@ import scalaz._
 import scalaz.std.anyVal._
 import scalaz.std.tuple._
 
-object Test1 extends Dog {
+object Test1 extends Dog with Assert {
 
   final case class Point[A](x: A, y: A)
 
@@ -31,5 +31,5 @@ object Test1 extends Dog {
   val pointLaws = Properties.list(
     scalazlaws.equal.all[Point[Int]],
     scalazlaws.functor.all[Point]
-  ).toTestCase()
+  ).lift()
 }
