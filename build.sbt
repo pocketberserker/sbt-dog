@@ -37,6 +37,8 @@ homepage := Some(url("https://github.com/scala-kennel/sbt-dog"))
 
 licenses := Seq("MIT License" -> url("http://www.opensource.org/licenses/mit-license.php"))
 
+commands += Command.command("updateReadme")(UpdateReadme.updateReadmeTask)
+
 pomPostProcess := { node =>
   import scala.xml._
   import scala.xml.transform._
