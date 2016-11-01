@@ -6,11 +6,11 @@ dogSettings
 
 dogVersion := System.getProperty("dog.version")
 
-val scala211 = "2.11.7"
+val scala211 = "2.11.8"
 
 scalaVersion := scala211
 
-crossScalaVersions := scala211 :: "2.10.5" :: Nil
+crossScalaVersions := scala211 :: "2.10.6" :: "2.12.0" :: Nil
 
 scalacOptions ++= (
   "-deprecation" ::

@@ -2,7 +2,7 @@ dogWithGen
 
 dogVersion := System.getProperty("dog.version")
 
-crossScalaVersions := "2.11.7" :: "2.10.5" :: Nil
+crossScalaVersions := "2.11.8" :: "2.10.6" :: "2.12.0" :: Nil
 
 scalacOptions ++= (
   "-deprecation" ::
