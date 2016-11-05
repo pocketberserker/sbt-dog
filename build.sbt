@@ -21,7 +21,7 @@ ScriptedPlugin.scriptedLaunchOpts ++= sys.process.javaVmArguments.filter(
 
 ScriptedPlugin.scriptedLaunchOpts ++= Seq(
   "-Dplugin.version=" + version.value,
-  "-Ddog.version=0.5.0",
+  "-Ddog.version=0.6.0",
   "-Dscalaprops.version=0.3.4"
 )
 
