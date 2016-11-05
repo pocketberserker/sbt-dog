@@ -12,6 +12,8 @@ sbt plugin for [dog](https://github.com/scala-kennel/dog)
 addSbtPlugin("com.github.pocketberserker" % "sbt-dog" % "0.1.1")
 ```
 
+### JVM
+
 `build.sbt`
 
 ```scala
@@ -45,3 +47,25 @@ dogVersion := "0.6.0"
 scalapropsVersion := "0.3.4"
 ```
 
+### Scala.js
+
+`build.sbt`
+
+```scala
+dogCoreSettings
+
+libraryDependencies += "com.github.pocketberserker" %%% "dog" % "0.6.0" % "test"
+```
+
+or
+
+```scala
+dogCoreSettings
+
+val dogVersion = "0.6.0"
+
+libraryDependencies += "com.github.pocketberserker" %%% "dog" % dogVersion % "test"
+libraryDependencies += "com.github.scalaprops" %%% "scalaprops" % scalapropsVersion % "test"
+libraryDependencies += "com.github.pocketberserker" %%% "dog-gen" % dogVersion % "test"
+libraryDependencies += "com.github.pocketberserker" %%% "dog-prop" % dogVersion % "test"
+```
